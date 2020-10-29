@@ -1,4 +1,3 @@
-// import { uuid } from 'uuidv4';
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, Generated } from 'typeorm';
 
 @Entity('user_tokens')
