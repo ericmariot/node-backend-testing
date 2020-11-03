@@ -29,6 +29,7 @@ class Appointment {
 
   @UpdateDateColumn()
   updated_at: Date;
+
   // constructor({ provider, date }: Omit<Appointment, 'id'> ) {
   //   this.id = uuid();
   //   this.provider = provider;
