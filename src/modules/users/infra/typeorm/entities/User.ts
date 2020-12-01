@@ -26,14 +26,14 @@ class User {
   @UpdateDateColumn()
   updated_at: Date;
 
-  @Expose({ name: 'avatar_url' })
+  @Expose({ name: "avatar_url" })
   getAvatarUrl(): string | null {
 
     if (!this.avatar) {
       return null;
     }
 
-    switch (uploadConfig.driver) {
+    switch (process.env.STORAGE_DRIVER) {
       case 'disk':
         return `${process.env.APP_API_URL}/files/${this.avatar}`;
 
